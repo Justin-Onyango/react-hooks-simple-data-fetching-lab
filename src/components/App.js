@@ -1,5 +1,5 @@
 // create your App component here
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 
 function App() {
     const [dogImage, setDogImage] = useState(null);
@@ -11,9 +11,9 @@ function App() {
             setDogImage(data.message);
         });
     }, []);
-    //using the empty array dependency to run the fetch only once
+    //using the empty array to run the fetch only once
 
-    if(!dogImage) return <p>Loading...</p>;
+    if(!dogImage) return <p>Loading...</p>
 
     return <img src={dogImage} alt="A Random Dog" />
 }
